@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WebGL Demo</title>
+		<script>
+			const path = 'basic';
+			// const path = 'attribute';
+			// const path = 'buffer';
+			// const path = 'interpolate';
+			// const path = 'wave';
+			// const path = 'drawTriangles';
+			// const path = 'click';
+			const srcipt = document.createElement('script');
+			srcipt.src = `./src/${path}.js`;
+			document.head.appendChild(srcipt);
+		</script>
+	</head>
+	<body>
+		<!--
+			因为整个WebGL的尺寸是与canvas宽度与高度相关连的
+			并且canvas的宽度与高度如果用css来设置的话
+			会被默认成100×100
+			也就意味着，你绘制出来的图形是把100×100的图形拉伸到当前canvas的尺寸中
+		-->
+		<!-- <canvas id="webgl" style="width: 700px; height: 500px"></canvas> -->
+		<!-- right -->
+		<div style="position: relative; display: inline-block; overflow: hidden">
+			<canvas id="webgl" width="700" height="500">
+				Please check if your browser supports canvas.
+			</canvas>
+		</div>
+	</body>
+</html>
